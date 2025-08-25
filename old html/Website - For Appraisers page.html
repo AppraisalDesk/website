@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Appraisers - Appraisal Desk</title>
+    <style>
+        :root {
+            /* Brand Colors */
+            --brand-primary: #BFB59D;
+            --brand-accent: #2D4A3E;
+            --background: #FFFFFF;
+            
+            /* Text Hierarchy */
+            --text-premium: #2F3435;
+            --text-primary: #3A4142;
+            --text-body: #333333;
+            --text-secondary: #666666;
+            
+            /* Supporting Colors */
+            --light-background: #FAFAFA;
+            --border-color: rgba(191, 181, 157, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Geist', system-ui, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background);
+            color: var(--text-body);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-primary);
+        }
+
+        .nav-links a.active {
+            color: var(--brand-accent);
+            font-weight: 600;
+        }
+
+        .mobile-menu {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--light-background);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: var(--brand-accent);
+            color: white;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-primary {
+            background: var(--brand-accent);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(45, 74, 62, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            padding: 14px 30px;
+            border: 2px solid var(--text-primary);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-primary);
+            color: white;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--brand-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .benefit-card:nth-child(2) .benefit-icon {
+            background: var(--brand-primary);
+        }
+
+        .benefit-card:nth-child(3) .benefit-icon {
+            background: var(--text-premium);
+        }
+
+        .benefit-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 16px;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background: var(--light-background);
+        }
+
+        .features-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .features-text h2 {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 1.125rem;
+            color: var(--text-body);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--brand-accent);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .features-visual {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-visual h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .pain-points {
+            list-style: none;
+        }
+
+        .pain-points li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1rem;
+            color: var(--text-body);
+        }
+
+        .pain-points li:last-child {
+            border-bottom: none;
+        }
+
+        .pain-icon {
+            width: 24px;
+            height: 24px;
+            color: #dc2626;
+            flex-shrink: 0;
+        }
+
+        .solution-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--brand-accent);
+            flex-shrink: 0;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* Trust Section */
+        .trust {
+            padding: 4rem 0;
+            background: var(--light-background);
+        }
+
+        .trust-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trust h2 {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 600;
+            color: var(--text-premium);
+            margin-bottom: 1.5rem;
+        }
+
+        .trust p {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .trust-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--brand-accent);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 4rem 0;
+            background: var(--text-premium);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--brand-accent);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-white:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-premium);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/51680c1e9c041608d16ebdea0b01bf15bbf4ee81/logos/No%20Background%20Logo%20%2B%20Name%203.png" alt="Appraisal Desk" class="logo-image">
+                </div>
+                <nav class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/lenders">For Lenders</a>
+                    <a href="/appraisers" class="active">For Appraisers</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+                <button class="mobile-menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">Always Free for Appraisers</div>
+            
+            <h1>Finally, Software Built by People Who Get It</h1>
+            <p class="hero-subtitle">
+                Ditch the clunky corporate tools. We've spent 15 years running an AMC and helping appraisers grow their business. This is the platform we wish existed from day one.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#signup" class="btn-primary">
+                    Join the Platform
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+                <a href="#learn-more" class="btn-secondary">
+                    Learn More
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Appraisal Desk Will Be Your Favorite</h2>
+                <p class="section-subtitle">We know you have a hundred different platforms to choose from. Here's why we're committed to making ours the one you actually want to use.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zM14 6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h8zM6 10a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Always Free, Forever</h3>
+                    <p>No hidden fees, no subscription costs, no "premium" tiers. We make money when our lender clients succeed, so you always use the platform for free.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3>Actually Simple to Use</h3>
+                    <p>Clean, intuitive design that gets out of your way. No overwhelming menus, no confusing workflows. Just the tools you need to do great work efficiently.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Built by People Who Understand Your Work</h3>
+                    <p>We understand your daily challenges because we've been helping appraisers succeed for 15 years. Every feature is designed around real appraiser workflows, not corporate assumptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <h2>Earn More Without Doing More</h2>
+                    <ul class="features-list">
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Access steady order flow from our growing network of lenders
+                        </li>
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            AI-powered assignment matching based on your expertise and location
+                        </li>
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Smart recommendations that help you work more efficiently
+                        </li>
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated status updates and communication handling
+                        </li>
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Mobile-first design that works perfectly on your phone or tablet
+                        </li>
+                        <li>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Direct support from people who understand appraiser workflows
+                        </li>
+                    </ul>
+                    
+                    <a href="#signup" class="btn-primary">
+                        Get Started Today
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="features-visual">
+                    <h3>We Fix Your Daily Frustrations</h3>
+                    <ul class="pain-points">
+                        <li>
+                            <svg class="pain-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            Clunky, outdated interfaces that slow you down
+                        </li>
+                        <li>
+                            <svg class="solution-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Clean, modern design that actually makes sense
+                        </li>
+                        <li>
+                            <svg class="pain-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            Endless back-and-forth emails and phone calls
+                        </li>
+                        <li>
+                            <svg class="solution-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Smart automation that handles routine communication
+                        </li>
+                        <li>
+                            <svg class="pain-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            Inconsistent order flow and payment delays
+                        </li>
+                        <li>
+                            <svg class="solution-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Reliable work from our proven network + fast payments
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Common Questions</h2>
+                <p class="section-subtitle">We know you've heard promises before. Here are honest answers to what you're probably wondering.</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is it really free forever?</h3>
+                    <p>Yes. We make money from our lender clients who pay for the platform. You'll never pay subscription fees, setup costs, or "premium" upgrade charges.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How much work will I actually get?</h3>
+                    <p>We're starting with steady flow from Home Base AMC (20,000+ annual orders) plus our growing network of lender clients. Volume grows as we add more lenders.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Will AI replace appraisers?</h3>
+                    <p>No. Our AI handles routine tasks like status updates and reporting. We don't succeed without you, so we're invested in your success.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How is this different from other platforms?</h3>
+                    <p>We've been running an AMC and helping appraisers succeed for 15 years, not tech people trying to understand appraisals. Every feature comes from real experience supporting appraisers.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What about support when I need help?</h3>
+                    <p>You'll get support from people who understand appraiser workflows after 15 years of AMC operations. No offshore call centers or scripted responses from people who've never worked with appraisers.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How quickly can I start receiving orders?</h3>
+                    <p>Once your profile is approved (usually within 24-48 hours), you can start receiving order notifications. The faster you respond, the more work you'll get.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-content">
+                <h2>Built on Proven Technology</h2>
+                <p>This isn't some startup experiment. Our platform has been successfully managing appraisals for 15 years through Home Base AMC. We know what works because we've been doing it at scale.</p>
+                
+                <div class="trust-stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Running AMC Operations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Building Technology</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20K+</span>
+                        <span class="stat-label">Orders Managed Annually</span>
+                    </div>
+                </div>
+                
+                <p>We're not just another software company. We're AMC operators who got tired of bad software and decided to build something better.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Work with Better Software?</h2>
+            <p class="cta-subtitle">
+                Join the platform built by people who understand your daily challenges after 15 years of helping appraisers succeed. It's free, it's simple, and it's designed to help you earn more without working harder.
+            </p>
+            <a href="#signup" class="btn-white">
+                Join Appraisal Desk Today
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Appraisal Desk. All rights reserved. A technology spinout from Home Base AMC.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
