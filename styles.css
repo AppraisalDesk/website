@@ -202,7 +202,7 @@
     /* Benefits Carousel */
     .benefits {
         padding: 4rem 0;
-        background: linear-gradient(rgba(250, 250, 250, 0.4), rgba(250, 250, 250, 0.4)), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background: linear-gradient(rgba(250, 250, 250, 0.4), rgba(250, 250, 250, 0.4)), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -873,6 +873,10 @@
     /* FAQ Section */
     .faq {
         padding: 4rem 0;
+        background: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     .faq-grid {
