@@ -85,8 +85,8 @@
                                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <h3>Complete Payment Processing</h3>
-                            <p>Borrower payments, vendor billing & payouts, all automated and integrated into your systems. Do more without hiring a billing expert.</p>
+                            <h3>Billing and payment distributions</h3>
+                            <p>Borrower payments, vendor billing & payouts, all automated in one system. Now you can process more orders without hiring a billing expert.</p>
                         </div>
                     </div>
                     
@@ -122,7 +122,19 @@
                                 </svg>
                             </div>
                             <h3>Scale Without the Bloat</h3>
-                            <p>Process 10x more orders with the same team size. Our integrated platform handles complexity automatically, so your business can grow without hiring more or burning out your team.</p>
+                            <p>Process more orders with the same team size. Our integrated platform handles complexity automatically, so your department can do more.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3>UAE 3.6 Ready</h3>
+                            <p>UAE 3.6 is mandated for Q4 2026. We're ready now, with full compliance and easy to use tools to ensure your team is ahead of the game.</p>
                         </div>
                     </div>
                 </div>
@@ -134,11 +146,22 @@
                 </button>
             </div>
             
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
+            <div class="carousel-indicators">
+                <div class="progress-line active" onclick="currentSlide(1)">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-line" onclick="currentSlide(2)">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-line" onclick="currentSlide(3)">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-line" onclick="currentSlide(4)">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-line" onclick="currentSlide(5)">
+                    <div class="progress-fill"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -381,7 +404,7 @@
     <script>
         let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.dot');
+        const progressLines = document.querySelectorAll('.progress-line');
 
         function showSlide(index, direction = 'next') {
             const currentSlide = slides[currentSlideIndex];
@@ -391,7 +414,11 @@
             slides.forEach(slide => {
                 slide.classList.remove('active', 'prev');
             });
-            dots.forEach(dot => dot.classList.remove('active'));
+            progressLines.forEach(line => {
+                line.classList.remove('active');
+                const fill = line.querySelector('.progress-fill');
+                fill.style.width = '0';
+            });
             
             // Set up the transition
             if (direction === 'next') {
@@ -413,7 +440,11 @@
                 currentSlide.style.transform = '';
                 
                 currentSlideIndex = index;
-                dots[index].classList.add('active');
+                progressLines[index].classList.add('active');
+                
+                // Fill the active progress line
+                const activeFill = progressLines[index].querySelector('.progress-fill');
+                activeFill.style.width = '100%';
             }, 10);
         }
 
@@ -432,8 +463,9 @@
             showSlide(index - 1, direction);
         }
 
-        // Auto-advance carousel every 13 seconds
-        setInterval(nextSlide, 13000);
+        // Initialize first slide progress
+        const firstFill = progressLines[0].querySelector('.progress-fill');
+        firstFill.style.width = '100%';
     </script>
 </body>
 </html>
