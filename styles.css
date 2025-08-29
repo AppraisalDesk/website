@@ -226,6 +226,19 @@
         background-attachment: fixed;
     }
 
+    /* Appraisers Page Why Choose - Background */
+    .appraisers-why-choose {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1505916349660-8d91a99c3e23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .appraisers-why-choose .section-header h2,
+    .appraisers-why-choose .section-subtitle {
+        color: white;
+    }
+
     .benefits-header {
         text-align: center;
         margin-bottom: 3rem;
