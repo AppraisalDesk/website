@@ -133,7 +133,8 @@
         font-size: clamp(2rem, 4vw, 4rem);
         font-weight: 600;
         color: var(--text-primary);
-        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .hero h3 {
@@ -228,7 +229,7 @@
 
     /* Appraisers Page Why Choose - Background */
     .appraisers-why-choose {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1505916349660-8d91a99c3e23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -715,7 +716,7 @@
         background: var(--brand-accent);
         color: white;
         border-radius: 9999px;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
         font-size: 14px;
         font-weight: 600;
     }
