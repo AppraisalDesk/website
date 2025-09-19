@@ -807,15 +807,15 @@
     /* Features Section */
     .features {
         padding: 4rem 0;
-        background: var(--text-premium);
+        background: #F5F2ED;
     }
 
     .features .section-header h2 {
-        color: var(--brand-primary);
+        color: var(--text-premium);
     }
 
     .features .section-subtitle {
-        color: #cccccc;
+        color: var(--text-primary);
     }
 
     .features-content {
@@ -944,20 +944,76 @@
     }
 
     .comparison-cta .btn-white {
-        background: var(--brand-primary);
-        color: var(--text-premium);
+        background: var(--brand-accent);
+        color: white;
     }
 
     .comparison-cta .btn-white:hover {
-        background: var(--brand-primary);
+        background: var(--brand-accent);
         filter: brightness(1.1);
         transform: scale(1.05);
-        box-shadow: 0 8px 24px rgba(191, 181, 157, 0.3);
+        box-shadow: 0 8px 24px rgba(45, 74, 62, 0.3);
     }
 
     /* Pain Points */
     .pain-points {
         list-style: none;
+    }
+
+    /* About Page - Tile Layout */
+    .about-page-main {
+        background: #F5F2ED;
+        min-height: 100vh;
+        padding: 3rem 0;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .about-tile {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+    }
+
+    .about-tile h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-premium);
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--brand-primary);
+        padding-bottom: 0.75rem;
+    }
+
+    .about-tile p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text-body);
+        margin-bottom: 1rem;
+    }
+
+    .about-tile p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Schedule Page - Same Background */
+    .schedule-page-main {
+        background: #F5F2ED;
+        min-height: 100vh;
+        padding: 3rem 0;
+    }
+
+    /* Contact Page - Same Background */
+    .contact-page-main {
+        background: #F5F2ED;
+        min-height: 100vh;
+        padding: 3rem 0;
     }
 
     .pain-points li {
@@ -1394,6 +1450,10 @@
         }
 
         .comparison-column {
+            padding: 1.5rem;
+        }
+
+        .about-tile {
             padding: 1.5rem;
         }
 
