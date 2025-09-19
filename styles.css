@@ -807,7 +807,15 @@
     /* Features Section */
     .features {
         padding: 4rem 0;
-        background: var(--light-background);
+        background: var(--text-premium);
+    }
+
+    .features .section-header h2 {
+        color: var(--brand-primary);
+    }
+
+    .features .section-subtitle {
+        color: #cccccc;
     }
 
     .features-content {
@@ -870,6 +878,81 @@
         font-size: 0.875rem;
         font-weight: 600;
         flex-shrink: 0;
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .comparison-column {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-column:last-child {
+        background: var(--light-background);
+    }
+
+    .comparison-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        text-align: left;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--brand-primary);
+    }
+
+    .comparison-title.positive {
+        color: var(--brand-accent);
+    }
+
+    .comparison-title.negative {
+        color: var(--text-premium);
+    }
+
+    .comparison-list {
+        list-style: none;
+    }
+
+    .comparison-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        color: var(--text-body);
+        line-height: 1.5;
+    }
+
+    .x-icon {
+        width: 20px;
+        height: 20px;
+        color: #dc3545;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .comparison-cta {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .comparison-cta .btn-white {
+        background: var(--brand-primary);
+        color: var(--text-premium);
+    }
+
+    .comparison-cta .btn-white:hover {
+        background: var(--brand-primary);
+        filter: brightness(1.1);
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(191, 181, 157, 0.3);
     }
 
     /* Pain Points */
@@ -1304,7 +1387,16 @@
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        
+
+        .comparison-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .comparison-column {
+            padding: 1.5rem;
+        }
+
         .faq-grid {
             grid-template-columns: 1fr;
         }
