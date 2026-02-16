@@ -114,6 +114,14 @@
         font-size: 14px;
         font-weight: 500;
         color: var(--text-primary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    a.credibility-banner:hover {
+        background: var(--brand-accent);
+        color: white;
+        border-color: var(--brand-accent);
     }
 
     .credibility-banner .star {
