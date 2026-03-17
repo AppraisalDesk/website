@@ -1,112 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Appraisal Desk</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AppraisalDesk/.github/b7219ce0a8f6d8c8d9f781146418e454f65105da/logos/Web%20-%20Favicon%2015.png">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Appraisal Desk</title>
+<meta name="description" content="Get in touch with Appraisal Desk. Questions about the platform? Ready to schedule a demo? We're here to help.">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AppraisalDesk/.github/b7219ce0a8f6d8c8d9f781146418e454f65105da/logos/Web%20-%20Favicon%2015.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/main/logos/AD%20Logo_app_name_%202.png" alt="Appraisal Desk" class="logo-image">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="for-lenders.html">For Lenders</a>
-                <a href="for-appraisers.html">For Appraisers</a>
-                <a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a>
-                <a href="https://app.appraisaldesk.com/auth/login">Log In</a>
-            </nav>
-            <button class="mobile-menu">☰</button>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD%20Logo_full_green.svg" alt="Appraisal Desk" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="for-lenders.html">For Lenders &amp; AMCs</a></li>
+      <li><a href="for-appraisers.html">For Appraisers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
+      <li><a href="https://app.appraisaldesk.com/auth/login" class="btn-nav">Log In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- CONTACT PAGE -->
+<div class="contact-page">
+  <div class="contact-inner">
+    <div class="contact-header">
+      <h1>Get in Touch</h1>
+      <p>Ready to streamline your appraisal management? Have questions about the platform? We're here to help.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>For Lenders &amp; AMCs</h3>
+        <p>See how our end-to-end platform can transform your appraisal and payment processing. We'll walk you through a demo on a real account.</p>
+        <a href="schedule.html" class="btn-primary">Request a Demo</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>For Appraisers</h3>
+        <p>Join the platform built by people who understand your work. No monthly subscriptions, complete transparency, designed by appraisers for appraisers.</p>
+        <a href="https://app.appraisaldesk.com/auth/login" class="btn-primary">Join the Appraiser Network</a>
+      </div>
+    </div>
+
+    <div class="contact-info-section">
+      <h3>General Contact Information</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <h4>Email</h4>
+          <p><a href="mailto:hello@appraisaldesk.com">hello@appraisaldesk.com</a></p>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="contact-page-main">
-        <div class="container">
-            <div class="page-header">
-                <h1>Get in Touch</h1>
-                <p class="page-subtitle">Ready to streamline your appraisal and payment processing? Have questions about our integrated platform? We're here to help.</p>
-            </div>
-
-            <!-- Contact Options -->
-            <div class="contact-options">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                        </svg>
-                    </div>
-                    <h3>For Lenders</h3>
-                    <p>See how our end-to-end platform can transform your appraisal and payment processing. You're going to love this.</p>
-                    <a href="schedule.html" class="btn-primary">
-                        Talk with us
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                        </svg>
-                    </div>
-                    <h3>For Appraisers</h3>
-                    <p>Join the platform built by people who understand your work. No monthly subscriptions, complete transparency, designed by appraisers for appraisers.</p>
-                    <a href="https://calendar.app.google/dSjMzinNospdNfLf7" class="btn-secondary">
-                        Schedule a call
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <h3>General Contact Information</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                            </svg>
-                        </div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:hello@appraisaldesk.com">hello@appraisaldesk.com</a></p>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h4>Office</h4>
-                        <p>13894 South Bangerter Parkway, STE 200<br>Draper, UT 84020</p>
-                    </div>
-
-                </div>
-            </div>
+        <div class="info-item">
+          <h4>Office</h4>
+          <p>13894 South Bangerter Parkway, STE 200<br>Draper, UT 84020</p>
         </div>
-    </main>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>© 2025 Appraisal Desk. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD_logo_full_tan.svg" alt="Appraisal Desk" class="footer-logo">
+      <div class="footer-tagline">Appraisal Order Management Software, end to end.</div>
+      <div class="footer-legal">&copy; 2026 Appraisal Desk</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="for-lenders.html">For Lenders &amp; AMCs</a></li>
+      <li><a href="for-appraisers.html">For Appraisers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
+      <li><a href="legal/privacy.html">Privacy</a></li>
+      <li><a href="legal/terms_of_use.html">Terms</a></li>
+      <li><a href="https://app.appraisaldesk.com/auth/login">Log In</a></li>
+    </ul>
+  </div>
+</footer>
+
 </body>
 </html>
