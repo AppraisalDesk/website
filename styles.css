@@ -89,6 +89,17 @@ h2 span { color: var(--green); font-weight: 300; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 .two-col-center { align-items: center; }
 
+/* CALCULATOR */
+.calculator { display: flex; align-items: center; gap: 40px; background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px 36px; margin-bottom: 40px; }
+.calc-input-group { display: flex; flex-direction: column; gap: 8px; }
+.calc-input-group label { font-size: 13px; font-weight: 500; color: var(--ink-mid); }
+.calc-input-group input { width: 120px; font-size: 24px; font-weight: 600; color: var(--ink); border: 1px solid var(--border-mid); border-radius: 6px; padding: 12px 16px; text-align: center; }
+.calc-input-group input:focus { outline: none; border-color: var(--green); }
+.calc-result { display: flex; flex-direction: column; gap: 4px; }
+.calc-result-label { font-size: 13px; font-weight: 500; color: var(--ink-mid); }
+.calc-result-value { font-size: 36px; font-weight: 700; color: var(--green); letter-spacing: -0.03em; }
+.calc-result-note { font-size: 13px; color: var(--ink-light); }
+
 /* AUDIENCE */
 .audience { padding: 88px 40px; }
 .audience-inner { max-width: var(--max); margin: 0 auto; }
@@ -131,6 +142,14 @@ h2 span { color: var(--green); font-weight: 300; }
 .how-num { font-size: 11px; font-weight: 700; color: var(--taupe); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .how-num-circle { width: 22px; height: 22px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #fff; font-weight: 700; }
 .how-time { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600; color: var(--green); }
+
+/* UAD 3.6 SECTION */
+.uad-ready { background: var(--taupe-light); border-top: 1px solid var(--border-mid); border-bottom: 1px solid var(--border-mid); }
+.uad-ready h2 { max-width: 600px; }
+.uad-ready h2 span { font-weight: 300; color: var(--ink-mid); }
+.uad-text { font-size: 16px; color: var(--ink-mid); line-height: 1.7; margin-bottom: 20px; max-width: 680px; }
+.uad-callout { background: var(--white); border: 1px solid var(--border-mid); border-radius: 8px; padding: 20px 24px; margin: 28px 0 32px; max-width: 680px; font-size: 15px; color: var(--ink-mid); line-height: 1.6; }
+.uad-callout strong { color: var(--ink); font-weight: 600; }
 
 /* PROOF BAR */
 .proof-bar { background: var(--ink); padding: 44px 40px; }
@@ -503,7 +522,8 @@ footer { background: var(--ink); padding: 44px 40px; }
   .nav-links { display: none; }
   .hero { padding: 110px 20px 72px; }
   .clarification { padding: 16px 20px; }
-  .audience, .how, .appraiser { padding: 64px 20px; }
+  .audience, .how, .appraiser, .uad-ready { padding: 64px 20px; }
+  .calculator { flex-direction: column; align-items: flex-start; gap: 24px; padding: 24px; }
   .audience-grid, .insight-inner, .appraiser-inner { grid-template-columns: 1fr; gap: 32px; }
   .how-grid { grid-template-columns: 1fr; gap: 12px; }
   .proof-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
