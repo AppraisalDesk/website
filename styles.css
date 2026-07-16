@@ -36,6 +36,27 @@
 .ledger-row--result .ledger-value { color: var(--green); font-weight: 700; font-size: 1.25rem; }
 .ledger-footnote { margin-top: 1rem; font-family: var(--font); font-size: 0.875rem; color: var(--ink-light); }
 
+/* Receipts grid (homepage core promise) */
+.receipts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; list-style: none; margin: 48px 0; }
+.receipt-item { font-size: 15px; color: var(--ink-mid); line-height: 1.65; }
+.receipt-item strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 4px; }
+
+/* Stats display */
+.stats-row { display: flex; justify-content: center; gap: 64px; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-value { font-family: var(--font-mono); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--ink); line-height: 1; }
+.stat-label { font-size: 14px; color: var(--ink-light); margin-top: 8px; }
+
+/* Hero stats */
+.hero-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 48px; margin-top: 48px; font-size: 14px; color: var(--ink-light); }
+.hero-stat strong { color: var(--ink); }
+
+@media (max-width: 700px) {
+  .receipts-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 32px; }
+  .hero-stats { flex-direction: column; gap: 12px; }
+}
+
 /* Clarifier bar - per design tokens */
 .clarifier { background: var(--off-white); padding: 1.25rem 2.5rem; text-align: center; }
 .clarifier p { font-size: 1rem; color: var(--ink-mid); margin: 0 auto; max-width: none; }

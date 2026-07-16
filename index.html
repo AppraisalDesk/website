@@ -3,221 +3,263 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appraisal Desk: Appraisal Order Management Software</title>
-<meta name="description" content="Appraisal Order Management Software software. From borrower billing to appraiser payout, everything happens in one platform. Built from 15 years of AMC operations.">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AppraisalDesk/.github/b7219ce0a8f6d8c8d9f781146418e454f65105da/logos/Web%20-%20Favicon%2015.png">
+<title>Appraisal Desk: Run Your Own Appraisal Desk, Keep $95 an Order</title>
+<meta name="description" content="Appraisal Desk is the software that runs an appraisal desk end to end. $55 flat per order, no setup fee, no minimum. Do more without adding people.">
+<link rel="canonical" href="https://appraisaldesk.com/">
+<meta property="og:title" content="Appraisal Desk: Run Your Own Appraisal Desk, Keep $95 an Order">
+<meta property="og:description" content="Appraisal Desk is the software that runs an appraisal desk end to end. $55 flat per order, no setup fee, no minimum. Do more without adding people.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://appraisaldesk.com/">
+<link rel="icon" type="image/png" href="assets/logos/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD%20Logo_full_green.svg" alt="Appraisal Desk" class="logo-img">
+      <img src="assets/logos/logo-full-green.svg" alt="Appraisal Desk" class="logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="for-lenders.html">For Lenders &amp; AMCs</a></li>
+      <li><a href="for-credit-unions.html">For Credit Unions</a></li>
+      <li><a href="for-lenders.html">For Lenders</a></li>
       <li><a href="for-appraisers.html">For Appraisers</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="uad-3-6.html">UAD 3.6</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
-      <li><a href="https://app.appraisaldesk.com/auth/login" class="btn-nav">Log In</a></li>
+      <li><a href="https://app.appraisaldesk.com/auth/login">Log In</a></li>
+      <li><a href="contact.html" class="btn-nav">Book a Demo</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </div>
 </nav>
 
 <!-- HERO -->
-<div style="max-width: var(--max); margin: 0 auto;">
-  <div class="hero">
-    <div class="hero-label">
-      <span class="hero-label-line"></span>
-      Appraisal Order Management Software
-      <span class="hero-label-line"></span>
-    </div>
-    <h1>Without the right data, a great appraisal desk <span>looks like overhead.</span></h1>
-    <p class="hero-sub">Every order managed, every dollar tracked, every report ready. Appraisal Desk runs the whole process and produces the evidence that shows leadership exactly what your team delivers.</p>
+<section class="hero">
+  <div class="section-inner" style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <h1>Stop losing $95 an order. Start earning it back.</h1>
+    <p class="hero-sub">Appraisal Desk is the software that runs an appraisal desk end to end, so you can run your own instead of paying an AMC to do it for you.</p>
     <div class="hero-actions">
-      <a href="schedule.html" class="btn-primary">Request a Demo</a>
-      <a href="for-lenders.html" class="btn-secondary">
-        For Lenders &amp; AMCs
-        <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" width="13" height="13"><path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <a href="contact.html" class="btn-primary">Book a Demo</a>
+      <a href="#the-math" class="btn-secondary">See the Math</a>
+    </div>
+    <div class="hero-stats">
+      <span class="hero-stat"><strong class="mono">20,000</strong> appraisals a year</span>
+      <span class="hero-stat"><strong class="mono">15</strong> years in production</span>
+      <span class="hero-stat"><strong class="mono">$55</strong> flat per order</span>
     </div>
   </div>
+</section>
+
+<!-- CLARIFIER BAR -->
+<div class="clarifier">
+  <p>We're not an AMC. We're the software that runs one. Credit unions run their whole appraisal desk in this system.</p>
 </div>
 
-<!-- AMC CLARIFICATION -->
-<div class="clarification">
-  <div class="clarification-inner">
-    <span class="clarif-tag">Quick note</span>
-    <p><strong>We're not an AMC.</strong> We're the software that runs one. If you manage appraisal orders internally, Appraisal Desk is your platform. You keep the relationships, the revenue, and the control.</p>
+<!-- THE MATH -->
+<section id="the-math" class="section-alt">
+  <div class="section-inner" style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <div class="section-label">The math</div>
+    <h2>A typical AMC charges about $150 an order to manage it. Appraisal Desk runs the same work for $55, flat. The $95 difference is yours, on every order.</h2>
+
+    <div class="ledger" style="margin: 48px auto;">
+      <div class="ledger-row">
+        <span class="ledger-label">Typical AMC management fee</span>
+        <span class="ledger-value">$150</span>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-label">Appraisal Desk, flat</span>
+        <span class="ledger-value">$55</span>
+      </div>
+      <div class="ledger-row ledger-row--result">
+        <span class="ledger-label">Yours, every order</span>
+        <span class="ledger-value">$95</span>
+      </div>
+    </div>
+
+    <p class="stat" style="font-size: 1.5rem; margin-bottom: 16px;">$247,000 a year at 50 orders a week.</p>
+    <p class="ledger-footnote" style="max-width: 480px; margin: 0 auto 32px;">Appraiser fees are separate and unchanged. This is the management fee: what it costs to run the order, not the appraisal itself.</p>
+    <a href="pricing.html" class="btn-secondary">See Pricing</a>
   </div>
-</div>
+</section>
 
-<!-- AUDIENCE -->
-<section class="audience">
-  <div class="audience-inner">
-    <div class="section-label">Who this is for</div>
-    <div class="audience-grid">
-      <div class="aud-card">
-        <div class="aud-num">01: You run an appraisal desk</div>
-        <h3>Volume is up. You're not sure how to grow without adding headcount.</h3>
-        <p>You're probably on an existing platform that handles orders but leaves you reconciling payments in QuickBooks and chasing down price changes in message threads. Your team is stretched, and the headcount conversation is coming.</p>
-        <div class="aud-outcome">Enable your team to handle twice the volume without adding headcount.</div>
-        <a href="for-lenders.html" class="card-link">
-          See how it works
-          <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<!-- THE CORE PROMISE -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">The core promise</div>
+    <h2>Do more without adding people. Your team handles more orders per person, and nothing slips.</h2>
+
+    <ul class="receipts-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; list-style: none; margin: 48px 0;">
+      <li class="receipt-item">
+        <strong>Nobody makes status calls.</strong> The platform sends automatic updates to everyone who's waiting on the order.
+      </li>
+      <li class="receipt-item">
+        <strong>Nobody babysits deadlines.</strong> The platform watches every active file and flags the one that's about to slip before it slips.
+      </li>
+      <li class="receipt-item">
+        <strong>Nobody renames PDFs.</strong> Incoming documents are read, renamed, and filed automatically.
+      </li>
+      <li class="receipt-item">
+        <strong>Nobody chases payments.</strong> Every charge, adjustment, and payout is tracked in the platform, start to finish.
+      </li>
+      <li class="receipt-item">
+        <strong>Nobody builds a panel by hand.</strong> Assignment runs automatically by grade and geography.
+      </li>
+      <li class="receipt-item">
+        <strong>Nobody runs QC by eye.</strong> The platform checks every report before a human opens it.
+      </li>
+    </ul>
+
+    <p style="font-size: 1.125rem; color: var(--ink); max-width: 720px;">Nobody on your team makes status calls anymore. The platform sends the updates, watches every deadline, and flags the file that's about to slip before it slips.</p>
+  </div>
+</section>
+
+<!-- TWO ALTITUDES -->
+<section class="section-alt">
+  <div class="section-inner">
+    <div class="section-label">Same software, two reasons to buy</div>
+    <div class="altitudes" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px;">
+      <div class="altitude-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 36px;">
+        <h3>If you run the desk</h3>
+        <p style="color: var(--ink-mid); margin: 16px 0 24px;">The busywork is gone. No status calls, no renaming files, no spreadsheet reconciliation, no babysitting deadlines. You handle a lot more without burning out.</p>
+        <a href="for-credit-unions.html" class="card-link">
+          For Credit Unions
+          <svg viewBox="0 0 13 13" fill="none" width="13" height="13"><path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="aud-card card-active">
-        <div class="aud-num">02: You're outsourcing to an AMC</div>
-        <h3>You're outsourcing appraisal management.</h3>
-        <p>Many AMCs charge $100-$150 per order. At 50 orders a week, that's upwards of $390k that could stay with your organization. If you like that math, we can get your team up and running in a week.</p>
-        <div class="aud-outcome">Keep the margin. Manage appraisals internally, on software built for it.</div>
-        <a href="for-lenders.html#business-case" class="card-link">
-          See the business case
-          <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="altitude-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 36px;">
+        <h3>If you run the numbers</h3>
+        <p style="color: var(--ink-mid); margin: 16px 0 24px;">You keep $95 an order that currently walks out the door. You scale orders without scaling payroll. The math runs to six figures a year, and the compliance trail is built in.</p>
+        <a href="pricing.html" class="card-link">
+          See the Math
+          <svg viewBox="0 0 13 13" fill="none" width="13" height="13"><path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE INSIGHT -->
-<section class="insight">
-  <div class="insight-inner">
-    <div class="insight-left">
-      <div class="insight-label">The core insight</div>
-      <h2>Paying appraisers quickly is a <span>competitive advantage.</span> Nobody is using it.</h2>
-      <p class="insight-lead">Every platform in this industry moves money the same way: collect it, take a cut, move on. The appraiser gets paid weeks later. Nobody has fixed this because nobody tracks the money all the way through. We do.</p>
-    </div>
-    <div class="insight-right">
-      <div class="insight-point">
-        <div class="insight-point-label">The problem</div>
-        <p>Appraisers notice who pays them fast and who makes them wait. <strong>That shows up in the quality and priority of the work they send back to you.</strong> This is why appraiser quality varies more than it should.</p>
+<!-- DIFFERENTIATORS -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">What makes this work</div>
+    <h2>The platform, not just the promise</h2>
+
+    <div class="diff-cards" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px;">
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Proven at volume</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Our anchor customer is an AMC that has trusted this platform with 20,000 appraisals a year, 400+ orders a week, for 15 years.</p>
       </div>
-      <div class="insight-point">
-        <div class="insight-point-label">How Appraisal Desk fixes it</div>
-        <p>When a lender approves an order, the appraiser gets paid. <strong>Automatically. No manual steps. No waiting on a check.</strong> Nobody is floating cash. The whole transaction closes inside the platform.</p>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">The panel comes with it</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Thousands of vetted appraisers are already on the platform, across all 50 states, and automated rotation puts your orders in front of qualified local appraisers the day you go live.</p>
       </div>
-      <div class="insight-point">
-        <div class="insight-point-label">What this means for you</div>
-        <p>The lenders using Appraisal Desk are building a reputation with appraisers as the desk that pays on time. <strong>Better appraisers prioritize your orders.</strong> That's a real edge.</p>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">One system for everything</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Collect payment, hold funds, pay appraisers, track every fee, issue refunds, generate reports, and issue 1099s, all in one place.</p>
+      </div>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Built for UAD 3.6</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Everyone else built UAD 3.6 for their core user. We built it for everyone who touches the order.</p>
+      </div>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Quality built in</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Every report runs through automated checks before a human opens it, and every appraiser is graded on every completed report.</p>
+      </div>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Compliance you can show</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">Every order, every dollar, every document, every change: logged automatically, timestamped, attributable.</p>
+      </div>
+      <div class="diff-card" style="background: var(--white); border: 1px solid var(--border-mid); border-radius: 10px; padding: 28px;">
+        <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">We build what you need</h4>
+        <p style="font-size: 14px; color: var(--ink-mid); line-height: 1.6;">If your desk truly needs something the platform doesn't do, tell us, and if it's real, we'll build it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS (brief) -->
-<section class="how">
-  <div class="how-inner">
-    <div class="section-label">How it works</div>
-    <h2>One platform. The whole lifecycle.</h2>
-    <p class="how-sub">Orders, documents, billing, appraiser payment, compliance reporting. Nothing leaves the system.</p>
-    <div class="how-grid">
-      <div class="how-item">
-        <div class="how-item-num">01</div>
-        <h4>Order comes in</h4>
-        <p>Assign it, configure who pays and how, collect payment from the borrower or lender. All configurable per order.</p>
+<!-- UAD 3.6 BANNER -->
+<section style="padding: 0;">
+  <div class="uad-banner" style="background: var(--green); padding: 64px 40px; text-align: center;">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div class="eyebrow" style="color: var(--taupe); margin-bottom: 16px;">Mandate: November 2026</div>
+      <h3 style="color: #fff; font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 16px;">Everyone else built UAD 3.6 for their core user. We built it for everyone who touches the order: your desk, your lenders, and your appraisers.</h3>
+      <a href="uad-3-6.html" class="btn-cta-white" style="margin-top: 24px;">Learn about UAD 3.6</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section>
+  <div class="section-inner" style="text-align: center;">
+    <p style="font-size: 1.125rem; color: var(--ink-mid); max-width: 720px; margin: 0 auto 48px;">We're software people first, and we build directly for the people running appraisal desks. Our anchor customer is an AMC that has trusted this platform with 20,000 appraisals a year for 15 years. It was proven in a real, high-volume operation long before it was sold as software.</p>
+
+    <div class="stats-row" style="display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;">
+      <div class="stat-item">
+        <div class="stat-value mono">20,000</div>
+        <div class="stat-label">appraisals a year</div>
       </div>
-      <div class="how-item">
-        <div class="how-item-num">02</div>
-        <h4>Order is in progress</h4>
-        <p>Every price change timestamped and attributed. Documents auto-renamed by AI. Full audit trail building automatically.</p>
+      <div class="stat-item">
+        <div class="stat-value mono">400+</div>
+        <div class="stat-label">orders a week</div>
       </div>
-      <div class="how-item">
-        <div class="how-item-num">03</div>
-        <h4>Order closes</h4>
-        <p>Appraiser gets paid, AMC fee processed, your portion logged. Everyone sees their transaction. 1099s and reports stay in the platform.</p>
+      <div class="stat-item">
+        <div class="stat-value mono">15</div>
+        <div class="stat-label">years in production</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROOF BAR -->
-<div class="proof-bar">
-  <div class="proof-inner">
-    <div class="proof-item">
-      <div class="proof-num">20k+</div>
-      <div class="proof-label">appraisals annually through our anchor customer</div>
-    </div>
-    <div class="proof-item">
-      <div class="proof-num">50</div>
-      <div class="proof-label">states, nationwide appraiser network</div>
-    </div>
-    <div class="proof-item">
-      <div class="proof-num">15+</div>
-      <div class="proof-label">years of AMC operations behind the platform</div>
-    </div>
-    <div class="proof-item">
-      <div class="proof-num">1</div>
-      <div class="proof-label">platform for orders, billing, payment, and compliance</div>
-    </div>
-  </div>
-</div>
-
-<!-- APPRAISER -->
-<section class="appraiser">
-  <div class="appraiser-inner">
-    <div class="appraiser-text">
-      <div class="section-label">For appraisers</div>
-      <h2>Sign up once. Start getting work immediately.</h2>
-      <p>Most platforms make you email individual AMCs and wait weeks to get added to their panel. Here, when you sign up, you're immediately in the rotation for every AMC and lender already on the platform.</p>
-      <p>No manual relationship-building. No waiting. If you're qualified and the work is in your area, you could have an order in your queue the same day.</p>
-      <a href="https://app.appraisaldesk.com/auth/login" class="btn-primary" style="font-size:14px; padding: 11px 22px;">Join the appraiser network</a>
-    </div>
-    <div class="appraiser-points">
-      <div class="ap-point"><div class="ap-dot"></div>Immediate access to all clients on platform, day one</div>
-      <div class="ap-point"><div class="ap-dot"></div>Automated panel rotation, no manual requests</div>
-      <div class="ap-point"><div class="ap-dot"></div>Full fee breakdown before you accept every order</div>
-      <div class="ap-point"><div class="ap-dot"></div>Paid when the lender approves, not weeks later</div>
-      <div class="ap-point"><div class="ap-dot"></div>Mobile-first, built for the road</div>
-      <div class="ap-point"><div class="ap-dot"></div>We build the things people ask for. Got an idea? Tell us.</div>
+<!-- FINAL CTA -->
+<section class="section-cta" style="background: var(--green); text-align: center; padding: 80px 40px;">
+  <div class="section-inner" style="max-width: 640px; margin: 0 auto;">
+    <h2 style="color: #fff; margin-bottom: 16px;">You're paying an AMC for a process you could run yourself. Bring it in-house and keep the margin, the control, and the relationships.</h2>
+    <div style="margin-top: 32px;">
+      <a href="contact.html" class="btn-cta-white">Book a Demo</a>
     </div>
   </div>
 </section>
-
-<!-- SPLIT CTA -->
-<div class="split-cta">
-  <div class="split-panel panel-a">
-    <div>
-      <div class="split-tag">For lenders, AMCs &amp; credit unions</div>
-      <h3>Ready to see it in action?</h3>
-      <p>No slide decks. We walk you through a demo on a real account, answer your specific questions, and give you a straight answer on fit.</p>
-    </div>
-    <a href="schedule.html" class="btn-cta-a">Request a Demo</a>
-  </div>
-  <div class="split-panel panel-b">
-    <div>
-      <div class="split-tag">For appraisers</div>
-      <h3>Creating your account takes a few minutes.</h3>
-      <p>Once you're verified, you're immediately in the rotation. No waiting on individual companies to add you.</p>
-    </div>
-    <a href="https://app.appraisaldesk.com/auth/login" class="btn-cta-b">Join the Appraiser Network</a>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD_logo_full_tan.svg" alt="Appraisal Desk" class="footer-logo">
-      <div class="footer-tagline">Appraisal Order Management Software, end to end.</div>
-      <div class="footer-legal">&copy; 2026 Appraisal Desk</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logos/logo-full-tan.svg" alt="Appraisal Desk" class="footer-logo">
+        <p class="footer-tagline">We're not an AMC. We're the software that runs one. You keep the relationships, the revenue, and the control.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="for-credit-unions.html">For Credit Unions</a></li>
+        <li><a href="for-lenders.html">For Lenders</a></li>
+        <li><a href="for-appraisers.html">For Appraisers</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="uad-3-6.html">UAD 3.6</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <ul class="footer-links">
-      <li><a href="for-lenders.html">For Lenders &amp; AMCs</a></li>
-      <li><a href="for-appraisers.html">For Appraisers</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
-      <li><a href="legal/privacy.html">Privacy</a></li>
-      <li><a href="legal/terms_of_use.html">Terms</a></li>
-      <li><a href="https://app.appraisaldesk.com/auth/login">Log In</a></li>
-    </ul>
+    <div class="footer-bottom">
+      <div class="footer-legal">&copy; 2026 Appraisal Desk</div>
+      <a href="mailto:hello@appraisaldesk.com" class="footer-email">hello@appraisaldesk.com</a>
+      <ul class="footer-legal-links">
+        <li><a href="legal/privacy.html">Privacy</a></li>
+        <li><a href="legal/terms_of_use.html">Terms</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
+<script src="js/nav.js"></script>
 </body>
 </html>
