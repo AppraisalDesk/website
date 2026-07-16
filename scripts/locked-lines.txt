@@ -1,0 +1,50 @@
+# Locked Key Lines from Messaging Doc Section 11
+# These must appear verbatim, character for character, wherever used.
+
+# Frame-setter (credit unions)
+We're not an AMC. We're the software that runs one. Credit unions run their whole appraisal desk in this system.
+
+# Frame-setter (general)
+We're not an AMC. We're the software that runs one. You keep the relationships, the revenue, and the control.
+
+# Savings line (primary)
+Stop losing $95 an order. Start earning it back.
+
+# Savings line (supporting)
+A typical AMC charges about $150 an order to manage it. Appraisal Desk runs the same work for $55, flat. The $95 difference is yours, on every order.
+
+# Savings line (member framing)
+Every order you run in-house keeps $95 in the credit union, working for your members.
+
+# Efficiency line
+Do more without adding people. Your team handles more orders per person, and nothing slips.
+
+# Nothing-slips line
+Nobody on your team makes status calls anymore. The platform sends the updates, watches every deadline, and flags the file that's about to slip before it slips.
+
+# Panel line
+You're not starting from zero. Thousands of vetted appraisers are already on the platform, and your orders reach the right local ones the day you go live.
+
+# Quality line
+Every report is checked before a human ever opens it, and every appraiser is graded on every report. Good work earns the next order. That's how quality runs without an AMC in the middle.
+
+# Compliance line
+Every order, every dollar, every document, every change: logged automatically. When your examiner asks, the answer already exists.
+
+# Financial line
+Email billing still exists in this industry. We don't do it. Every charge, every adjustment, every payout is tracked in the platform automatically. You'll have a full financial trail before anyone asks for one.
+
+# UAD 3.6 line
+Everyone else built UAD 3.6 for their core user. We built it for everyone who touches the order: your desk, your lenders, and your appraisers.
+
+# Heritage line
+We're software people first, and we build directly for the people running appraisal desks. Our anchor customer is an AMC that has trusted this platform with 20,000 appraisals a year for 15 years. It was proven in a real, high-volume operation long before it was sold as software.
+
+# Build-with-you line
+If your desk truly needs something the platform doesn't do, we'll build it. Ask our anchor customer: fifteen years of their feedback is baked into the product.
+
+# Wedge line (credit unions)
+You're paying an AMC for a process you could run yourself. Bring it in-house and keep the margin, the control, and the relationships.
+
+# Appraiser line
+Sign up once. Get work everywhere. The day you're verified, you're available to every lender and AMC on the platform, and our panels rotate automatically, so a qualified appraiser can get orders the same day they join.
