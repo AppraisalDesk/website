@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Appraisal Desk</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AppraisalDesk/.github/b7219ce0a8f6d8c8d9f781146418e454f65105da/logos/Web%20-%20Favicon%2015.png">
+    <link rel="icon" type="image/png" href="../assets/logos/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<!-- NAV -->
+<!-- HEADER -->
 <nav>
   <div class="nav-inner">
     <a href="../index.html" class="logo">
-      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD%20Logo_full_green.svg" alt="Appraisal Desk" class="logo-img">
+      <img src="../assets/logos/logo-full-green.svg" alt="Appraisal Desk" class="logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="../for-lenders.html">For Lenders &amp; AMCs</a></li>
+      <li><a href="../for-credit-unions.html">For Credit Unions</a></li>
+      <li><a href="../for-lenders.html">For Lenders</a></li>
       <li><a href="../for-appraisers.html">For Appraisers</a></li>
+      <li><a href="../pricing.html">Pricing</a></li>
+      <li><a href="../uad-3-6.html">UAD 3.6</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
-      <li><a href="https://app.appraisaldesk.com/auth/login" class="btn-nav">Log In</a></li>
+      <li><a href="https://app.appraisaldesk.com/auth/login">Log In</a></li>
+      <li><a href="../contact.html" class="btn-nav">Book a Demo</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </div>
 </nav>
 
@@ -653,22 +663,32 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="https://raw.githubusercontent.com/AppraisalDesk/.github/5622103ce740e29db45755d251631e3cb23009cc/logos/AD_logo_full_tan.svg" alt="Appraisal Desk" class="footer-logo">
-      <div class="footer-tagline">Appraisal Order Management Software, end to end.</div>
-      <div class="footer-legal">&copy; 2026 Appraisal Desk</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/logos/logo-full-tan.svg" alt="Appraisal Desk" class="footer-logo">
+        <p class="footer-tagline">We're not an AMC. We're the software that runs one. You keep the relationships, the revenue, and the control.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../for-credit-unions.html">For Credit Unions</a></li>
+        <li><a href="../for-lenders.html">For Lenders</a></li>
+        <li><a href="../for-appraisers.html">For Appraisers</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../uad-3-6.html">UAD 3.6</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </div>
-    <ul class="footer-links">
-      <li><a href="../for-lenders.html">For Lenders &amp; AMCs</a></li>
-      <li><a href="../for-appraisers.html">For Appraisers</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="https://notes.appraisaldesk.com" target="_blank">Notes on UAD 3.6</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="terms_of_use.html">Terms</a></li>
-      <li><a href="https://app.appraisaldesk.com/auth/login">Log In</a></li>
-    </ul>
+    <div class="footer-bottom">
+      <div class="footer-legal">&copy; 2026 Appraisal Desk</div>
+      <a href="mailto:hello@appraisaldesk.com" class="footer-email">hello@appraisaldesk.com</a>
+      <ul class="footer-legal-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms_of_use.html">Terms</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
+<script src="../js/nav.js"></script>
 </body>
 </html>
