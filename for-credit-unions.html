@@ -93,62 +93,33 @@
 
 <!-- ROI CALCULATOR -->
 <section id="calculator" class="section-alt">
-  <div class="section-inner" style="max-width: 600px; margin: 0 auto;">
-    <div class="section-label" style="text-align: center;">Run your numbers</div>
-    <h2 style="text-align: center;">See what your credit union keeps.</h2>
+  <div class="section-inner">
+    <div class="section-label">Run your numbers</div>
+    <h2>Set your volume. See what you keep.</h2>
 
-    <div class="calculator" style="margin-top: 40px;">
-      <div class="calculator-input-group">
-        <label class="calculator-label" for="orders-per-week">Orders per week</label>
-        <div class="calculator-input-row">
-          <input type="number" id="orders-per-week" class="calculator-input" value="50" min="5" max="500">
-          <input type="range" id="orders-slider" class="calculator-slider" value="50" min="5" max="500">
+    <div class="calc" style="margin-top: 48px;">
+      <div class="calc-controls">
+        <div class="clab">Your appraisal volume</div>
+        <div class="calc-value">
+          <span class="cv-num" id="ordersOut">50</span>
+          <span class="cv-unit">orders per week</span>
         </div>
+        <input type="range" id="ordersRange" min="10" max="500" step="5" value="50" aria-label="Orders per week">
+        <div class="range-ends"><span>10</span><span>500</span></div>
       </div>
 
-      <button class="calculator-advanced-toggle" id="advanced-toggle">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
-        Advanced options
-      </button>
-
-      <div class="calculator-advanced" id="advanced-options">
-        <div class="calculator-input-group">
-          <label class="calculator-label" for="amc-fee">Current AMC management fee per order</label>
-          <div class="calculator-input-row">
-            <span style="color: var(--ink-mid);">$</span>
-            <input type="number" id="amc-fee" class="calculator-input" value="150" min="75" max="300" style="width: 100px;">
-          </div>
-        </div>
+      <div class="ledger" aria-live="polite">
+        <div class="lrow"><span class="lname">Orders per year</span><span class="lval" id="ordersYear">2,600</span></div>
+        <div class="lrow lrow-emphasis"><span class="lname">Typical AMC spend</span><span class="lval" id="amcYear">$390,000</span></div>
+        <div class="lrow"><span class="lname">Appraisal Desk cost ($55 flat)</span><span class="lval" id="adYear">$143,000</span></div>
+        <div class="lrow lrow-highlight"><span class="lname">What you keep per year</span><span class="lval" id="annualKeep">$247,000</span></div>
       </div>
+    </div>
 
-      <div class="calculator-results">
-        <div class="calculator-result-row">
-          <span class="calculator-result-label">Orders per year</span>
-          <span class="calculator-result-value" id="result-orders-year">2,600</span>
-        </div>
-        <div class="calculator-result-row">
-          <span class="calculator-result-label">Current AMC spend</span>
-          <span class="calculator-result-value" id="result-amc-spend">$390,000</span>
-        </div>
-        <div class="calculator-result-row">
-          <span class="calculator-result-label">Appraisal Desk cost ($55 flat)</span>
-          <span class="calculator-result-value" id="result-ad-cost">$143,000</span>
-        </div>
-        <div class="calculator-result-row calculator-result-row--highlight">
-          <span class="calculator-result-label">What you keep per year</span>
-          <span class="calculator-result-value" id="result-savings">$247,000</span>
-        </div>
-        <div class="calculator-result-row" style="margin-top: 8px;">
-          <span class="calculator-result-label">Per order kept</span>
-          <span class="calculator-result-value" id="result-per-order">$95</span>
-        </div>
-      </div>
+    <p class="calc-caption">This is the management fee difference: $150 typical AMC vs $55 Appraisal Desk, on every order. Appraiser fees are separate and unchanged.</p>
 
-      <p class="ledger-footnote" style="margin-top: 24px;">This compares management fees only. Appraiser fees are separate and unchanged either way. Your team runs the desk (the pitch is scale without adding headcount, not zero cost).</p>
-
-      <div class="calculator-cta" style="text-align: center;">
-        <a href="contact.html" class="btn-primary">Book a Demo</a>
-      </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="contact.html" class="btn-primary">Book a Demo</a>
     </div>
   </div>
 </section>
