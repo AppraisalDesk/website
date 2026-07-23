@@ -115,6 +115,36 @@
 .clarifier p { font-size: 14px; color: var(--ink-mid); margin: 0 auto; max-width: none; }
 .clarifier strong { color: var(--ink-light); font-weight: 600; margin-right: 4px; }
 
+/* Prominent clarifier callout (AMC page) */
+.clarifier-callout {
+  background: var(--taupe);
+  padding: 48px 40px;
+  text-align: center;
+}
+.clarifier-callout-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.clarifier-callout-inner p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--ink-light);
+  margin: 0;
+}
+.clarifier-callout-inner strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
 /* Receipt items as cards (for dark sections) */
 .receipt-card {
   background: rgba(255,255,255,0.06);
