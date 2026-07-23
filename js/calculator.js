@@ -2,7 +2,7 @@
 (function() {
   var range = document.getElementById('ordersRange');
   var ordersOut = document.getElementById('ordersOut');
-  var ordersYear = document.getElementById('ordersYear');
+  var ordersYearDisplay = document.getElementById('ordersYearDisplay');
   var amcYear = document.getElementById('amcYear');
   var adYear = document.getElementById('adYear');
   var annualKeep = document.getElementById('annualKeep');
@@ -12,6 +12,7 @@
 
   var AMC = 150;
   var AD = 55;
+  var KEPT = 95;
   var WEEKS = 52;
 
   function fmtNum(n) {
@@ -32,10 +33,12 @@
     var ordersPerYear = ordersPerWeek * WEEKS;
     var amcCost = ordersPerYear * AMC;
     var adCost = ordersPerYear * AD;
-    var savings = amcCost - adCost;
+    var savings = ordersPerYear * KEPT;
 
     ordersOut.textContent = ordersPerWeek;
-    ordersYear.textContent = fmtNum(ordersPerYear);
+    if (ordersYearDisplay) {
+      ordersYearDisplay.textContent = fmtNum(ordersPerYear) + ' a year';
+    }
     amcYear.textContent = fmtCurrency(amcCost);
     adYear.textContent = fmtCurrency(adCost);
     annualKeep.textContent = fmtCurrency(savings);

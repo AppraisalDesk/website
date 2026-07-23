@@ -75,6 +75,169 @@
 .calc .ledger .lrow-highlight .lval { font-family: var(--font-mono); font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: var(--green); letter-spacing: -0.02em; }
 .calc-caption { margin-top: 30px; font-size: 14.5px; color: var(--ink-light); max-width: 64ch; }
 
+/* Dark section calculator */
+.calc-dark { margin-top: 48px; }
+.calc-dark-controls { margin-bottom: 40px; }
+.calc-dark-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+.calc-dark-readout {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.calc-dark-num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: clamp(44px, 6vw, 56px);
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.calc-dark-unit {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+}
+.calc-dark-annual {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-left: 8px;
+}
+.calc-dark input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(var(--taupe), var(--taupe)) no-repeat, rgba(255,255,255,0.15);
+  background-size: 40% 100%;
+  outline: none;
+  cursor: pointer;
+}
+.calc-dark input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--taupe-light);
+  border: 4px solid var(--ink);
+  box-shadow: 0 2px 8px -1px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.calc-dark input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--taupe-light);
+  border: 4px solid var(--ink);
+  box-shadow: 0 2px 8px -1px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.calc-dark-ends {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 12px;
+}
+
+/* Dark table */
+.calc-dark-table { max-width: 100%; }
+.calc-dark-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.calc-dark-row:last-child { border-bottom: none; }
+.calc-dark-row-header {
+  padding: 0 0 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.calc-dark-hdr {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.calc-dark-name {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+}
+.calc-dark-val {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  min-width: 90px;
+}
+.calc-dark-static { color: rgba(255,255,255,0.5); font-weight: 400; }
+.calc-dark-row-result {
+  border-top: 2px solid var(--taupe);
+  border-bottom: none;
+  margin-top: 8px;
+  padding-top: 20px;
+}
+.calc-dark-row-result .calc-dark-name {
+  color: var(--taupe-light);
+  font-weight: 600;
+}
+.calc-dark-row-result .calc-dark-static {
+  color: var(--taupe-light);
+  font-weight: 600;
+  font-size: 17px;
+}
+.calc-dark-row-result .calc-dark-big {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--taupe-light);
+  letter-spacing: -0.02em;
+}
+.calc-dark-mobile { display: none; }
+
+@media (max-width: 480px) {
+  .calc-dark-row {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+  .calc-dark-row-header,
+  .calc-dark-static {
+    display: none;
+  }
+  .calc-dark-mobile {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  .calc-dark-row-result .calc-dark-mobile {
+    color: var(--taupe-light);
+  }
+  .calc-dark-name { white-space: normal; }
+  .calc-dark-val { min-width: 70px; }
+}
+
 /* Legacy ledger (non-calculator contexts) */
 .ledger { font-family: var(--font-mono); max-width: 420px; }
 .ledger-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.5rem 0; }
