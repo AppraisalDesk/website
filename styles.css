@@ -936,7 +936,6 @@ footer { background: var(--ink); padding: 64px 40px 40px; }
   .audience, .how, .appraiser { padding: 72px 20px; }
   .audience-grid, .insight-inner, .appraiser-inner { grid-template-columns: 1fr; gap: 32px; }
   .how-grid { grid-template-columns: 1fr; gap: 12px; }
-  .proof-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .proof-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
   .split-cta { grid-template-columns: 1fr; }
   .panel-a { border-right: none; border-bottom: 1px solid var(--border); }
@@ -950,19 +949,25 @@ footer { background: var(--ink); padding: 64px 40px 40px; }
   .page-header { padding: 90px 20px 56px; }
   section { padding: 64px 20px; }
   .two-col, .alt-grid, .compare-grid, .features-grid, .outcomes-row { grid-template-columns: 1fr; gap: 0; }
-  .section-dark ul[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  /* Override inline grid styles everywhere */
+  .section-dark ul[style*="grid-template-columns"],
+  .section-dark div[style*="grid-template-columns"],
+  .section-alt div[style*="grid-template-columns"],
+  .section-inner div[style*="grid-template-columns"],
+  section div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 16px !important; }
   .features-grid { gap: 0; }
   .outcomes-row { gap: 10px; }
   .feature-cell { border-right: none; }
   .agree-grid { grid-template-columns: 1fr; }
-  .week-grid { grid-template-columns: 1fr 1fr; }
-  .proof-grid { grid-template-columns: 1fr 1fr; }
+  .week-grid { grid-template-columns: 1fr; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .proof-inner { grid-template-columns: 1fr; }
+  .types-grid { grid-template-columns: 1fr; }
   .diff-section, .differentiators, .order-types, .rating-callout, .faq { padding: 64px 20px; }
   .honest { padding: 56px 20px; }
   .table-stakes { padding: 32px 20px; }
   .diff-inner, .rating-inner, .faq-inner { grid-template-columns: 1fr; gap: 36px; }
   .diff-cards-grid { grid-template-columns: 1fr; }
-  .types-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-compare { grid-template-columns: 1fr; }
   .diff-compare-item.old-way { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; padding-right: 0; }
   .table-stakes-inner { flex-direction: column; gap: 16px; }
@@ -979,9 +984,18 @@ footer { background: var(--ink); padding: 64px 40px 40px; }
   .benefits-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 560px) {
-  .week-grid, .proof-grid { grid-template-columns: 1fr; }
-  .types-grid { grid-template-columns: 1fr; }
+/* RESPONSIVE GRID UTILITIES */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+@media (max-width: 860px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* BRAND PAGE */
